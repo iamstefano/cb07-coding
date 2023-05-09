@@ -39,7 +39,7 @@ function inputSubmit(event) {
 
 form.addEventListener("submit", inputSubmit);
 
-//******************Esercizio3****************************************
+//******************Esercizio3 avanzato*************************************
 
 let input2 = document.querySelector(".input2");
 let buttonAdd = document.querySelector(".buttonAdd");
