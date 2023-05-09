@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: rgb(20, 33, 61);
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.hamburger {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+main {
+  flex-grow: 1;
+  position: relative;
+}
+
+.sidebar {
+  width: 300px;
+  height: calc(100vh - 80px - 80px);
+  background-color: rgb(252, 163, 17);
+  color: #000000;
+  padding: 20px;
+  font-size: 24px;
+  position: absolute;
+  top: 0px;
+  left: -400px;
+  transition: 0.35s all;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.show {
+  left: 0px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.esercizio1 {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.esercizio1 button {
+  width: 100px;
+}
+
+.esercizio2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.esercizio2 form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.paragraph,
+.paragraph2 {
+  font-size: 22px;
+  color: rgb(235, 94, 40);
+  text-decoration: wavy underline;
+  text-underline-position: below;
+}
+
+.esercizio3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.ulElement {
+  color: blue;
+}
+
+footer {
+  background-color: rgb(20, 33, 61);
+  width: 100%;
+  height: 80px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
