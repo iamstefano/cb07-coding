@@ -7,4 +7,26 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 127, 80, 0.753);
+}
+
+.divContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 117, 112, 0.664);
+  width: 20vw;
+  height: 20vh;
+  border-radius: 8px;
+  box-shadow: 15px 15px 12px 0px rgba(151, 34, 34, 0.39);
+}
+
+.usersList {
+  color: rgb(255, 255, 255);
+  list-style-type: none;
 }
