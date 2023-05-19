@@ -175,6 +175,15 @@ export const createLogIn = () => {
       pricesEl.style.display = "flex";
       rootEl.append(productListTitle, productList);
       rootEl.removeChild(wrapperEl);
+      const productCardEls = qSA(".productCard");
+
+      productCardEls.forEach((product) =>
+        product.addEventListener("click", () =>
+          fetch(`https://dummyjson.com/products/${product.id}`)
+            .then((res) => res.json())
+            .then((data) => rootEl.append(createProductModal(data, rootEl)))
+        )
+      );
     } else {
       alert("Username e/o password non corretta");
     }
