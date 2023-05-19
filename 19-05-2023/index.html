@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Stefano Are - Vanilla JS</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script src="./script.js" type="module"></script>
+    <script src="./utils/fn.js" type="module"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="index.html">
+        <img
+          width="48"
+          height="48"
+          src="https://img.icons8.com/fluency/48/jake.png"
+          alt="logo image"
+        />
+      </a>
+      <ul class="navbar__links">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Favorites</a>
+        </li>
+        <li>
+          <a href="#">Contacts</a>
+        </li>
+      </ul>
+      <form class="navbar__search">
+        <input
+          class="searchInput"
+          type="text"
+          placeholder="Search Product"
+          minlength="3"
+          required
+        />
+      </form>
+      <ul class="navbar__user">
+        <li>
+          <button class="user">
+            <span class="material-symbols-outlined"> account_circle </span>
+          </button>
+        </li>
+        <li>
+          <button class="cart">
+            <span class="material-symbols-outlined"> shopping_cart </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="hero">
+      <img
+        src="https://img.freepik.com/free-photo/parcels-box-cardboard-boxes-smartphone-online-delivery-transportation-logistics-concept-pink-background-3d-rendering-illustration_56104-1291.jpg?w=1380&t=st=1684425057~exp=1684425657~hmac=ab293456ed3c8116d52bd1f349da0914d712e36268f01163060ad5e0b3d1f926"
+        alt="hero image"
+      />
+      <div class="hero__content">
+        <h1>
+          Buy our best seller products, 30% Off
+          <span>'MAYtheforcebewithyou!'</span>
+        </h1>
+        <button>Buy Now</button>
+      </div>
+    </div>
+    <div class="filtersContainer">
+      <form class="categoriesEl">
+        <select class="categories" name="category" id="category">
+          <option value="">Select category</option>
+          <option value="smartphones">Smartphones</option>
+          <option value="Laptops">Laptops</option>
+          <option value="fragrances">Profumi</option>
+          <option value="skincare">Bellezza</option>
+        </select>
+      </form>
+      <form class="pricesEl">
+        <select class="prices" name="price" id="prices">
+          <option value="">Order by price</option>
+          <option value="0100">0-100</option>
+          <option value="100300">100-300</option>
+          <option value="3001000">300-1000</option>
+        </select>
+      </form>
+    </div>
+    <div id="root"></div>
+  </body>
+</html>
