@@ -1,44 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
 body {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", Helvetica, sans-serif;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, #ccfad3 0%, #c4d7f8 100%);
 }
 
-.container {
-  width: 360px;
+.wrapper {
+  border: 2pix solid black;
+  width: 400px;
+  padding: 14px;
 }
 
-#inputField {
-  width: 300px;
-  height: 46px;
-  border-width: 0;
-  border: 1px solid black;
+.wrapper h2 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.textInput {
+  border-color: #b0f5ba;
+  box-shadow: 2px 2px 8px 1px #b0f5ba;
   outline: none;
-  font-size: 25px;
-  vertical-align: middle;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
 }
 
-#addToDo {
-  height: 50px;
-  width: 50px;
-  border: 1px solid black;
-  vertical-align: middle;
-  font-size: 30px;
+.wrapper ul {
+  padding: 0;
+  list-style-type: none;
 }
 
-/* .paragraph-styling {
-  margin: 0;
+.wrapper ul li {
+  padding: 2px 4px;
   cursor: pointer;
-  font-size: 20px;
 }
 
-.to-dos {
-  margin-top: 25px;
-} */
+.wrapper ul li:hover {
+  background-color: coral;
+  color: white;
+  transition: all 0.35s;
+}

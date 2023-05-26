@@ -9,10 +9,19 @@
     <title>Vanilla JS to-do list</title>
   </head>
   <body>
-    <h1>To-Do List</h1>
-    <div class="container">
-      <input id="inputField" type="text" /><button id="addToDo">+</button>
-      <div class="to-dos" id="toDoContainer"></div>
+    <div class="wrapper">
+      <h2>To-Do List</h2>
+      <form>
+        <input
+          class="textInput"
+          type="text"
+          placeholder="Add a new thing to do"
+          required
+          minlength="3"
+        />
+        <input type="submit" value="Add" />
+      </form>
+      <ul class="listToDo"></ul>
     </div>
   </body>
 </html>

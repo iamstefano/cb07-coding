@@ -24,8 +24,8 @@
 .inputUser,
 .inputPw {
   border-color: #b0f5ba;
-  color: #84b0fc;
   box-shadow: 2px 2px 8px 1px #b0f5ba;
+  color: #84b0fc;
   outline: none;
   font-size: 16px;
   border-radius: 5px;

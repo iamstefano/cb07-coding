@@ -69,6 +69,12 @@ const loginModal = () => {
       );
     } else {
       alert("Error: wrong login data");
+      inputUserEl.value = "";
+      inputUserPwEl.value = "";
+      inputUserEl.style.border = "1px solid red";
+      inputUserEl.style.boxShadow = "2px 2px 8px 1px red";
+      inputUserPwEl.style.border = "1px solid red";
+      inputUserPwEl.style.boxShadow = "2px 2px 8px 1px red";
     }
   });
 };
