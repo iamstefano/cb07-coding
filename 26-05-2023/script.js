@@ -10,16 +10,23 @@ const taskGen = (itemData) => {
   const wrapper = cE("li");
 
   wrapper.textContent = itemData.content;
+  //confronto elementi e cancellazione double click elementi lista
   wrapper.addEventListener("dblclick", () => {
-    todoList = todoList.filter((todo) => todo.id !== itemData.id);
+    todoList = todoList.filter((todo) => todo.id !== itemData.id); //high order function
     listItemRender();
   });
+  wrapper.addEventListener("click", () => {
+    wrapper.style.textDecoration = "line-through";
+    listItemRender();
+  });
+
   return wrapper;
 };
+
 //Callback onHandleSubmit
-const onHandleSubmit = (e) => {
-  e.preventDefault();
-  todoList.push({ id: Date.now(), content: e.target[0].value });
+const onHandleSubmit = (evt) => {
+  evt.preventDefault();
+  todoList.push({ id: Date.now(), content: evt.target[0].value });
   listItemRender();
 };
 //func renderizzazione elementi lista
@@ -31,15 +38,16 @@ const listItemRender = () => {
   todoList.forEach((todo) => {
     listEl.appendChild(taskGen(todo));
   });
+
   localStorage.setItem("todoList", JSON.stringify(todoList));
 };
-
-const onHandleItemDelete = (e) => {};
+//func completamento task con click su elemento
 
 ////////////////Variabili///////////////////
 const formEl = qS("form");
 const listEl = qS(".listToDo");
 const textInputEl = qS(".textInput");
+const taskOk = qS("li");
 //localstorage
 let todoList = JSON.parse(localStorage.getItem("todoList")) || [];
 
@@ -51,4 +59,3 @@ listItemRender();
 
 ////////////////Eventi///////////////////
 formEl.addEventListener("submit", onHandleSubmit);
-listEl.addEventListener("dblclick", onHandleItemDelete);
