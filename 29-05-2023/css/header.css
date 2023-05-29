@@ -54,6 +54,8 @@ header {
   display: flex;
   align-items: center;
   gap: 14px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .navItem.active .navLink__content {
