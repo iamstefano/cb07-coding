@@ -6,15 +6,37 @@
   flex-direction: column;
 }
 
-.homeWrapper {
+.home_wrapper {
   color: var(--color-text);
   border-bottom: 1px solid #ffffff57;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
-.forYouWrapperEl {
+.homeEl {
+  padding-left: 10px;
+}
+.forYou_wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   color: var(--color-text);
-  border-bottom: 1px solid #ffffff57;
+  margin-top: 2em;
+}
+
+.for_you,
+.follow {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0 1em 0;
+}
+
+.for_you:hover,
+.follow:hover {
+  background-color: #ffffff2d;
+  transition: all 0.35s;
 }
