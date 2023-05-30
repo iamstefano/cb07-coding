@@ -1,7 +1,8 @@
 .content {
   top: 0;
-  height: 100vh;
-  border: 1px solid #ffffff57;
+  height: fit-content;
+  border-right: 1px solid #ffffff57;
+  border-left: 1px solid #ffffff57;
   display: flex;
   flex-direction: column;
 }
@@ -70,6 +71,8 @@
   width: 450px;
   display: flex;
   flex-direction: column;
+  flex: wrap;
+  overflow: hidden;
   gap: 20px;
   margin: 0 7px 0px 7px;
 }
@@ -98,10 +101,11 @@
 
 /************Tweet Cards section*******************/
 .tweet_wrapper_card {
-  width: 540px;
+  /*  width: 540px; */
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  border-bottom: 1px solid #ffffff57;
+  padding: 4px 0 4px 0;
   /* border: 1px solid red; */
 }
 
@@ -126,4 +130,14 @@
   cursor: pointer;
   width: 450px;
   margin: 8px;
+}
+
+.tweet_header_user {
+  display: flex;
+  gap: 15px;
+}
+
+.tweet_header_user span:first-of-type {
+  font-weight: bold;
+  letter-spacing: 1px;
 }

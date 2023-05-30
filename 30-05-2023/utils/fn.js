@@ -5,6 +5,7 @@ export const tweetGen = (tweetData) => {
   const tweetContainerColumn = cE("div");
   const userAvatarTweet = cE("img");
   const tweetContentEl = cE("div");
+  const tweetHeaderUser = cE("div");
   const nameEl = cE("span");
   const userNameEl = cE("span");
   const textContentEl = cE("p");
@@ -23,13 +24,15 @@ export const tweetGen = (tweetData) => {
   userAvatarTweet.alt = tweetData.user?.username;
   userAvatarTweet.className = "user_avatar_tweet";
   tweetContentEl.className = "tweet_content";
+  tweetHeaderUser.className = "tweet_header_user";
 
   nameEl.textContent = tweetData.user?.firstName;
   userNameEl.textContent = "@" + tweetData.user?.username;
   textContentEl.textContent = tweetData.body;
-  reactionsEl.textContent = tweetData.reactions;
+  reactionsEl.textContent = "❤️" + tweetData.reactions;
 
-  tweetContentEl.append(nameEl, userNameEl, textContentEl, reactionsEl);
+  tweetContentEl.append(tweetHeaderUser, textContentEl, reactionsEl);
+  tweetHeaderUser.append(nameEl, userNameEl);
   tweetContainerColumn.append(userAvatarTweet, tweetContentEl);
   tweetWrapperEl.append(tweetContainerColumn);
 
