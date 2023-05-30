@@ -30,7 +30,8 @@ export const tweetGen = (tweetData) => {
   reactionsEl.textContent = tweetData.reactions;
 
   tweetContentEl.append(nameEl, userNameEl, textContentEl, reactionsEl);
-  tweetWrapperEl.append(userAvatarTweet, tweetContentEl);
+  tweetContainerColumn.append(userAvatarTweet, tweetContentEl);
+  tweetWrapperEl.append(tweetContainerColumn);
 
   return tweetWrapperEl;
 };
