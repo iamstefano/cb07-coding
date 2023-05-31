@@ -27,7 +27,8 @@ export const tweetGen = (tweetData) => {
   tweetHeaderUser.className = "tweet_header_user";
 
   nameEl.textContent = tweetData.user?.firstName;
-  userNameEl.textContent = "@" + tweetData.user?.username;
+  userNameEl.textContent = "" + tweetData.user?.username;
+  userNameEl.prepend("@");
   textContentEl.textContent = tweetData.body;
   reactionsEl.textContent = "❤️" + tweetData.reactions;
 
@@ -37,4 +38,39 @@ export const tweetGen = (tweetData) => {
   tweetWrapperEl.append(tweetContainerColumn);
 
   return tweetWrapperEl;
+};
+
+export const followGen = (user) => {
+  // image Placeholder
+  const imagePlaceholder =
+    "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg";
+
+  const followEl = cE("div");
+  const followImgEl = cE("img");
+  const followUser = cE("div");
+  const followUserInfo = cE("div");
+  const followName = cE("p");
+  const followUsername = cE("p");
+  const followButton = cE("div");
+
+  followEl.className = "follow__item";
+  followImgEl.className = "follow__image";
+  followUserInfo.className = "follow__userInfo";
+  followUser.className = "follow__user";
+  followName.className = "follow__name";
+  followUsername.className = "follow__username";
+  followButton.className = "follow__button";
+
+  followImgEl.src = user?.image || imagePlaceholder;
+  followImgEl.alt = user?.username;
+
+  followName.textContent = user?.firstName + " " + user?.lastName;
+  followUsername.textContent = "@" + user?.username;
+  followButton.textContent = "Segui";
+
+  followUserInfo.append(followName, followUsername);
+  followUser.append(followUserInfo, followButton);
+  followEl.append(followImgEl, followUser);
+
+  return followEl;
 };
