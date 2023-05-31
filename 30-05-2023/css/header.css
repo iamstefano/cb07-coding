@@ -1,12 +1,21 @@
 header {
-  position: sticky;
+  /*   position: sticky;
+  top: 0; */
+  /* height: 100vh; */
+  /* position: relative; */
+}
+
+.containerHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: fixed;
   top: 0;
-  height: 100vh;
-  position: relative;
+  height: 100%;
 }
 
 .mainLogo {
-  padding: 12px;
+  padding: 10px;
 }
 
 .logoWrapper {
@@ -24,7 +33,7 @@ header {
 }
 
 .logoWrapper svg {
-  width: 24px;
+  width: 30px;
   height: auto;
   fill: var(--color-text);
 }
@@ -54,7 +63,7 @@ header {
 .navLink__content {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -222,6 +231,7 @@ header {
   .buttonTweet {
     cursor: pointer;
     min-height: 50px;
+    min-width: 250px;
   }
 
   .buttonTweet .buttonTweet__icon {
@@ -233,5 +243,9 @@ header {
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 1px;
+  }
+
+  .profileButton {
+    margin-top: 22vh;
   }
 }
