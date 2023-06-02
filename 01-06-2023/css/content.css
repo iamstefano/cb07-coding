@@ -22,23 +22,13 @@
 .homeEl {
   padding-left: 10px;
 }
+
 .forYou_wrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   color: var(--color-text);
   margin-top: 1em;
-}
-
-.for_you,
-.following {
-  width: 50%;
-  height: 50px;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1em 0 0 0;
 }
 
 .for_you:hover,
@@ -48,10 +38,35 @@
   cursor: pointer;
 }
 
-.for_you:active,
-.following:active {
-  background-color: #ffffff2d;
-  text-decoration: underline solid bold var(--color-brand);
+.for_you,
+.following {
+  position: relative;
+  width: 50%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.for_you::after,
+.following::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  height: 4px;
+  border-radius: 8px;
+  background-color: var(--color-brand);
+  opacity: 0;
+  transition: all 0.25s ease;
+}
+
+.active.for_you::after,
+.active.following::after {
+  opacity: 1;
 }
 
 /************Tweet Home section*******************/

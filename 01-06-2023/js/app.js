@@ -36,8 +36,8 @@ const createEl = (
 const homeWrapper = createEl("div", "home_wrapper", null, contentDiv);
 const homeEl = createEl("h2", "homeEl", "Home", homeWrapper);
 const forYouWrappEl = createEl("div", "forYou_wrapper", null, homeWrapper);
-const forYouP = createEl("p", "for_you", "For you", forYouWrappEl);
-const followingP = createEl("p", "following", "Following", forYouWrappEl);
+const forYouP = createEl("div", "for_you active", "For you", forYouWrappEl);
+const followingP = createEl("div", "following", "Following", forYouWrappEl);
 /****************Parte centrale Tweet*************************************/
 const tweetWrapperHome = createEl(
   "div",
